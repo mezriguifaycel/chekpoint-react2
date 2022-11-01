@@ -1,41 +1,23 @@
 
-function Coord(){
- 
-    const facebookProfile = "https://www.facebook.com/faycel.mezrigui";
-    const linkedinProfile= "https://www.linkedin.com/faycel.mezrigui";
-  
-    return (
-        <div className="info">
-            <div className="cor">
-            <section className="section1">
-    Nom : <br/>
-    Prenom :<br/>
-    Email : <br/>
-   Date Naissace : <br/>
-    Age : <br/> 
-    <br/>
-   Media Sociale : <br/>
-            </section>
-      
- <section className="section2">
-    Faycel  <br/>
-    Mezrigui <br/>
-    mezrigui.faycel@gmail.com <br/>
-    22/02/1988<br/>
-    35 Ans <br/>
-    <br/>
-    <div className="mydiv">
-     <a href= {facebookProfile} target="_blank" class="lnkpd"> Facebook </a>
-     <a href= {facebookProfile} target="_blank" class="lnkpd"> LinkedIn</a>
-    </div>
-    
-    </section>
- 
-            </div>
-            
-        </div>
+function Coord(props){
+    return(
        
+        <div className="profile">
+        < h3>Profile Personel</h3>
+       <img src={props.imge}  className="imgf"/> <br/>
+       <h2> <span>Nom :</span>  {props.Nom}</h2>
+        <h2><span>Prenom:</span> {props.Prenom} </h2>
+        <h2><span>Date de Naissance: </span>{props.DateNaissance} </h2>
+        <h2><span>Email :</span> {props.Email} </h2>
+        <h2><span>Age :</span> {props.Age} </h2>
+        <h2><span>Adresse:</span> {props.Adresse} </h2>
+       
+       <a href={props.Linkedin}>Linkedin</a>
+        <a href={props.Facebook}>Facebook</a>
+      
+         
+        </div>
     );
-}
 
+}
 export default Coord;
